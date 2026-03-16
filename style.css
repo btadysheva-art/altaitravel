@@ -1,0 +1,293 @@
+/* Organic & Natural стили */
+:root {
+    --primary-color: #135c20;       /* Основной зеленый */
+    --secondary-color: #588157;     /* Светлый зеленый */
+    --accent-color: #a3b18a;       /* Бежево-зеленый акцент */
+    --text-color: #344e41;         /* Темно-зеленый текст */
+    --light-text-color: #dad7cd;   /* Светлый текст */
+    --bg-color: #f8f9fa;          /* Основной фон */
+    --card-bg: #ffffff;           /* Фон карточек */
+    --border-color: #d4a373;      /* Коричневая граница */
+}
+
+/* Базовая типографика */
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Шапка */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 25px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Основной контент */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 40px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png');
+}
+
+.hero h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* Галерея */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.item {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    z-index: 1;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.item h3, .item p {
+    position: relative;
+    z-index: 2;
+    margin: 5px 0 0 0;
+}
+
+.item-large {
+    grid-column: span 2;
+}
+
+/* Контакты */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-info div {
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(58,90,64,0.2);
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Обо мне */
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about {
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    margin-bottom: 50px;
+}
+
+.about ul {
+    padding-left: 20px;
+}
+
+.about li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+
+/* Подвал */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Анимации */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .item-large {
+        grid-column: span 1;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
